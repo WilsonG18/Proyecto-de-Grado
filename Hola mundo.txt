@@ -1,1 +1,15 @@
 Hola Mundo..
+
+Instrucciones:
+
+para enviar los archivos al repositorio:
+git init
+git status
+git add .
+git commit "modificado"
+git branch -M main
+git push -u origin main
+
+Para recibir los archivos del repositorio:
+git fetch origin main:tmp
+git rebase tmp
