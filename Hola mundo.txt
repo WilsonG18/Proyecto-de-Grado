@@ -6,7 +6,7 @@ para enviar los archivos al repositorio:
 git init
 git status
 git add .
-git commit "modificado"
+git commit "Modificado el 21-08"
 git branch -M main
 git push -u origin main
 
