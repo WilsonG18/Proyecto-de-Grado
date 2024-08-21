@@ -4,7 +4,7 @@ Para recibir los archivos del repositorio:
 git fetch origin main:tmp /
 git rebase tmp /
 
-para enviar los archivos al repositorio:
+Para enviar los archivos al repositorio:
 git init /
 git status /
 git add . /
