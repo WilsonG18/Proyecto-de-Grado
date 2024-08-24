@@ -2,7 +2,7 @@
  
 #define DEBUG true
  
-SoftwareSerial esp8266(2,3);  // Haz que la línea RX de Arduino sea el pin 2, y que la línea TX de Arduino sea el pin 3.
+SoftwareSerial esp8266(2,3);   // Haz que la línea RX de Arduino sea el pin 2, y que la línea TX de Arduino sea el pin 3.
                               // Esto significa que debes conectar la línea TX del esp al pin 2 de Arduino
                               // y la línea RX del esp al pin 3 de Arduino
 

@@ -130,7 +130,7 @@ URL_withPacket += "Connection: close\r\n\r\n";
 
    
    //Ahora que tenemos nuestros datos, vamos a esperar a que se desconecte la conexión.
-   /- El ESP eventualmente devolverá 'Desvincular'
+   // El ESP eventualmente devolverá 'Desvincular'
    //delay(10);
    Serial.println("FOUND DATA & DISCONNECTED");
    serial_dump_ESP();//Ahora podemos limpiar el buffer y leer lo que aún esté allí

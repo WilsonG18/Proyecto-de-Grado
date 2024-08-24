@@ -9,8 +9,8 @@ LiquidCrystal_I2C lcd(0x27,20,4);  //A veces la dirección del LCD no es 0x3f. C
 
 
 //Definir el usado
-#define ESP8266_RX 10  //Conecta el pin TX del ESP a este pin RX del Arduino
-#define ESP8266_TX 11  //Conecta el pin TX del Arduino al pin RX del ESP  
+#define ESP8266_RX A0  //Conecta el pin TX del ESP a este pin RX del Arduino
+#define ESP8266_TX A1  //Conecta el pin TX del Arduino al pin RX del ESP  
 
 int LED1 = 2;
 int LED2 = 3;
@@ -25,7 +25,15 @@ int switch1 = 7;
 int switch2 = 8;
 int switch3 = 9;
 
+const char SSID_ESP[] = "CUARTO PISO 5G";                    //Da el nombre EXACTO de tu WIFI
+const char SSID_KEY[] = "1020292090";                        //Agrega la contraseña de esa conexión WIFI
+const char* host = "192.168.1.8";                           //Agrega el host sin "www" Ejemplo: electronoobs.com
+String NOOBIX_id = "99999";                                 //Este es el ID que tienes en tu base de datos, he usado 99999 porque hay un máximo de 5 caracteres
+String NOOBIX_password = "12345";                           //Agrega la contraseña de la base de datos, también máximo 5 caracteres y solo valores numéricos
+String location_url = "/proyecto/Diseño_Pagina_Web/TX.php"; //ubicación de su archivo PHP en el servidor. En este caso, TX.php se encuentra directamente en la primera carpeta del servidor
+                                                            //Si tienes los archivos en una carpeta diferente, agrégalos también, Ejemplo: "/ESP/TX.php?id=" Donde la carpeta es ESP
 
+/*
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////Variables que debes cambiar según tus valores/////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -41,7 +49,7 @@ String location_url = "/TX.php?id=";            //ubicación de su archivo PHP e
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+*/
 
 
 
@@ -179,9 +187,9 @@ void setup(){// INICIO DE CONFIGURACIÓN
   
 
   
-  ESP8266.begin(9600);//velocidad de transmisión predeterminada para ESP
+  ESP8266.begin(115200);//velocidad de transmisión predeterminada para ESP
   ESP8266.listen();//no es necesario a menos que se utilicen otras instancias seriales de software
-  Serial.begin(9600); //para estado y depuración
+  Serial.begin(115200); //para estado y depuración
   
   delay(2000);//retraso antes de empezar
   setup_ESP();// Ve a configurar la ESP
