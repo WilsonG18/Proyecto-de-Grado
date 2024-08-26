@@ -27,7 +27,7 @@ int switch3 = 9;
 
 const char SSID_ESP[] = "CUARTO PISO 5G";                    //Da el nombre EXACTO de tu WIFI
 const char SSID_KEY[] = "1020292090";                        //Agrega la contraseña de esa conexión WIFI
-const char* host = "192.168.1.8";                           //Agrega el host sin "www" Ejemplo: electronoobs.com
+const char* host = "localhost";                           //Agrega el host sin "www" Ejemplo: electronoobs.com
 String NOOBIX_id = "99999";                                 //Este es el ID que tienes en tu base de datos, he usado 99999 porque hay un máximo de 5 caracteres
 String NOOBIX_password = "12345";                           //Agrega la contraseña de la base de datos, también máximo 5 caracteres y solo valores numéricos
 String location_url = "/proyecto/Diseño_Pagina_Web/TX.php"; //ubicación de su archivo PHP en el servidor. En este caso, TX.php se encuentra directamente en la primera carpeta del servidor
