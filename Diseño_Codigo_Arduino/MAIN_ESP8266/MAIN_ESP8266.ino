@@ -9,10 +9,10 @@ LiquidCrystal_I2C lcd(0x27,20,4);  //A veces la dirección del LCD no es 0x3f. C
 
 
 //Definir el usado
-#define ESP8266_RX A0  //Conecta el pin TX del ESP a este pin RX del Arduino
-#define ESP8266_TX A1  //Conecta el pin TX del Arduino al pin RX del ESP  
+#define ESP8266_RX 10  //Conecta el pin TX del ESP a este pin RX del Arduino
+#define ESP8266_TX 11  //Conecta el pin TX del Arduino al pin RX del ESP  
 
-int LED1 = 2;
+int LED1 = 13;
 int LED2 = 3;
 int LED3 = 4;
 int LED4 = 5;
@@ -24,7 +24,7 @@ int Potentiometer_4 = A3;
 int switch1 = 7;
 int switch2 = 8;
 int switch3 = 9;
-
+/*
 const char SSID_ESP[] = "CUARTO PISO 5G";                    //Da el nombre EXACTO de tu WIFI
 const char SSID_KEY[] = "1020292090";                        //Agrega la contraseña de esa conexión WIFI
 const char* host = "localhost";                           //Agrega el host sin "www" Ejemplo: electronoobs.com
@@ -32,25 +32,25 @@ String NOOBIX_id = "99999";                                 //Este es el ID que 
 String NOOBIX_password = "12345";                           //Agrega la contraseña de la base de datos, también máximo 5 caracteres y solo valores numéricos
 String location_url = "/proyecto/Diseño_Pagina_Web/TX.php"; //ubicación de su archivo PHP en el servidor. En este caso, TX.php se encuentra directamente en la primera carpeta del servidor
                                                             //Si tienes los archivos en una carpeta diferente, agrégalos también, Ejemplo: "/ESP/TX.php?id=" Donde la carpeta es ESP
+*/
 
-/*
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////Variables que debes cambiar según tus valores/////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Agrega tus datos: SSID + CLAVE + host + ubicación + id + contraseña
 //////////////////////////////////////////////
-const char SSID_ESP[] = "MiFibra-4132";         //Da el nombre EXACTO de tu WIFI
-const char SSID_KEY[] = "vzP5anY5";             //Agrega la contraseña de esa conexión WIFI
-const char* host = "noobix.000webhostapp.com";  //Agrega el host sin "www" Ejemplo: electronoobs.com
+const char SSID_ESP[] = "CUARTO PISO 5G";         //Da el nombre EXACTO de tu WIFI
+const char SSID_KEY[] = "1020292090";             //Agrega la contraseña de esa conexión WIFI
+const char* host = "controlpanelfv.free.nf";  //Agrega el host sin "www" Ejemplo: electronoobs.com
 String NOOBIX_id = "99999";                     //Este es el ID que tienes en tu base de datos, he usado 99999 porque hay un máximo de 5 caracteres
 String NOOBIX_password = "12345";               //Agrega la contraseña de la base de datos, también máximo 5 caracteres y solo valores numéricos
-String location_url = "/TX.php?id=";            //ubicación de su archivo PHP en el servidor. En este caso, TX.php se encuentra directamente en la primera carpeta del servidor
+//String location_url = "/htdocs/TX.php?i=";            //ubicación de su archivo PHP en el servidor. En este caso, TX.php se encuentra directamente en la primera carpeta del servidor
                                                 //Si tienes los archivos en una carpeta diferente, agrégalos también, Ejemplo: "/ESP/TX.php?id=" Donde la carpeta es ESP
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-*/
 
+String location_url = "TX.php?id=99999&password=12345&i=1";
 
 
 //Variables utilizadas en el código

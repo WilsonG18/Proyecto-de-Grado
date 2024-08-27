@@ -4,7 +4,8 @@ boolean connect_ESP(){//devuelve 1 si tuvo éxito o 0 si no
   Serial.println("CONNECTING");
   //o 443 para HTTPS
   //enshare.000webhostapp.co
-  ESP8266.print("AT+CIPSTART=0,\"TCP\",\"www.noobix.000webhostapp.com\",80\r\n");//Conéctese a su servidor web
+  ESP8266.print("AT+CIPSTART=0,\"TCP\",\"www.controlpanelfv.free.nf\",80\r\n");//Conéctese a su servidor web
+  //ESP8266.print("AT+CIPSTART=0,\"TCP\",\"www.controlpanelfv.free.nf\"\r\n");//Conéctese a su servidor web
 
   
   //read_until_ESP(palabra clave, tamaño de la palabra clave, tiempo de espera en ms, guardar datos 0-no 1-sí 'más sobre esto más adelante')

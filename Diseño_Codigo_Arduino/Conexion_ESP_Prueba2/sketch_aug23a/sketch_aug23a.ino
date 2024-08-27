@@ -2,14 +2,14 @@
  
 #define DEBUG true
  
-SoftwareSerial esp8266(2,3);   // Haz que la línea RX de Arduino sea el pin 2, y que la línea TX de Arduino sea el pin 3.
+SoftwareSerial esp8266(10,11);   // Haz que la línea RX de Arduino sea el pin 2, y que la línea TX de Arduino sea el pin 3.
                               // Esto significa que debes conectar la línea TX del esp al pin 2 de Arduino
                               // y la línea RX del esp al pin 3 de Arduino
 
 void setup()
 {
-  Serial.begin(9600);
-  esp8266.begin(9600);        // La velocidad en baudios de tu ESP puede ser diferente
+  Serial.begin(115200);
+  esp8266.begin(115200);        // La velocidad en baudios de tu ESP puede ser diferente
   
   pinMode(11,OUTPUT);
   digitalWrite(11,LOW);
@@ -25,7 +25,7 @@ void setup()
    
   sendCommand("AT+RST\r\n",2000,DEBUG);                               // módulo de reinicio
   sendCommand("AT+CWMODE=1\r\n",1000,DEBUG);                          // configurar como punto de acceso
-  sendCommand("AT+CWJAP=\"mySSID\",\"myPassword\"\r\n",3000,DEBUG);
+  sendCommand("AT+CWJAP=\"CUARTO PISO 5G\",\"1020292090\"\r\n",3000,DEBUG);
   delay(10000);
   sendCommand("AT+CIFSR\r\n",1000,DEBUG);                             // obtener dirección ip
   sendCommand("AT+CIPMUX=1\r\n",1000,DEBUG);                          // configurar para múltiples conexiones

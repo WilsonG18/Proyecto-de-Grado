@@ -48,7 +48,7 @@ boolean setup_ESP(){//devuelve un '1' si tiene éxito
         //i=1 porque i=0 es la longitud de los datos encontrados entre las dos palabras clave, PERO esto incluye la longitud de la segunda palabra clave, por lo que i<= a la longitud menos
         //tamaño de la palabra clave, pero recuerda, sizeof() devolverá uno extra, que se restará, así que lo agregué nuevamente en +1
     ip_address[0] = (scratch_data_from_ESP[0]-sizeof(keyword_rn)+1);//Almacena la longitud de la dirección IP en [0], lo mismo que antes
-    Serial.print("IP ADDRESS = ");//imprimirlo para verificar
+    Serial.print("IP ADDRESS = " + ip_address[0]);//imprimirlo para verificar
     for(int i=1; i<=ip_address[0]; i++)//enviar la dirección ip
     Serial.print(ip_address[i]);
     Serial.println("");
